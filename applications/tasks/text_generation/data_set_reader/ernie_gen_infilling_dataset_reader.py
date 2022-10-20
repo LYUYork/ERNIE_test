@@ -633,7 +633,7 @@ class InfillingGenReader(BaseDataSetReaderErnieGen):
         Example = namedtuple('Example', ["src", "tgt", "knowledge", "data_id"])
         examples = []
         for index, query in enumerate(query_list):
-            examples.append(Example(src=[query['answer'], query['paragraph']], tgt=None, knowledge=None, data_id=index))
+            examples.append(Example(src=[query['paragraph']], tgt=None, knowledge=None, data_id=index)) #query['answer'], 
 
         for batch_data in self.prepare_batch_data(examples, self.config.batch_size):
             yield batch_data

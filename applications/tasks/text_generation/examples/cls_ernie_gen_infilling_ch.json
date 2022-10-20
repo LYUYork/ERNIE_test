@@ -8,7 +8,7 @@
         "data_path": "./data/ernie_gen_dureader/train.tsv",
         "shuffle": true,
         "batch_size": 8,
-        "epoch": 20,
+        "epoch": 1,
         "sampling_rate": 1.0,
         "need_data_distribute": true,
         "extra_params":{
@@ -88,7 +88,7 @@
     "is_eval_dev": 1,
     "is_eval_test": 0,
     "eval_step": 10000,
-    "save_model_step": 100000000,
+    "save_model_step": 1000,
     "load_parameters": "",
     "load_checkpoint": "",
     "pre_train_model": [

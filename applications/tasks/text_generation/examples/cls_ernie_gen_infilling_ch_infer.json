@@ -58,9 +58,9 @@
   "inference": {
     "type": "CustomInference",
     "output_path": "./output/predict_result.txt",
-    "PADDLE_PLACE_TYPE": "gpu",
+    "PADDLE_PLACE_TYPE": "cpu",
     "thread_num": 1,
-    "inference_model_path": "output/ernie_gen_ch/save_inference_model/inference_step_39421/",
+    "inference_model_path": "../../models_hub/ernie_gen_ch_dir/params/",
     "extra_param": {
       "meta":{
         "job_type": "text_generation"
