@@ -12,7 +12,7 @@
         "sampling_rate": 1.0,
         "need_data_distribute": true,
         "extra_params":{
-          "vocab_path":"../../models_hub/ernie_gen_ch_dir/vocab_ernie_gen_ch.txt",
+          "vocab_path":"../../models_hub/ernie_3.0_base_ch_dir/vocab.txt",
           "max_seq_len":512,
           "do_lower_case":true,
           "in_tokens":false,
@@ -36,7 +36,7 @@
         "sampling_rate": 1.0,
         "need_data_distribute": true,
         "extra_params":{
-          "vocab_path":"../../models_hub/ernie_gen_ch_dir/vocab_ernie_gen_ch.txt",
+          "vocab_path":"../../models_hub/ernie_3.0_base_ch_dir/vocab.txt",
           "max_seq_len":512,
           "do_lower_case":true,
           "in_tokens":false,
@@ -55,7 +55,7 @@
     "embedding": {
       "emb_dim": 768,
       "use_amp": false,
-      "config_path": "../../models_hub/ernie_gen_ch_dir/ernie_gen_ch_config.json"
+      "config_path": "../../models_hub/ernie_3.0_base_ch_dir/ernie_config.json"
     },
     "optimization":{
       "learning_rate": 5e-5,
@@ -80,7 +80,7 @@
   },
   "trainer": {
     "type" : "CustomGenerationTrainer",
-    "PADDLE_PLACE_TYPE": "gpu",
+    "PADDLE_PLACE_TYPE": "cpu",
     "ramdom_seed": 1,
     "save_inference_model": true,
     "train_log_step": 10,
@@ -94,7 +94,7 @@
     "pre_train_model": [
       {
         "name": "ernie_gen_ch",
-        "params_path": "../../models_hub/ernie_gen_ch_dir/params"
+        "params_path": "../../models_hub/ernie_3.0_base_ch_dir/params"
       }
     ],
     "output_path": "./output/ernie_gen_ch"
